@@ -17,7 +17,6 @@
       --text-secondary: #9aa7a5;
       --accent-green: #6ba346;
       --accent-sage: #9bae9b;
-      --plaque-bg: #f8faf9;
     }
 
     * {
@@ -108,16 +107,12 @@
       align-items: center;
     }
 
-    /* Architectural Light Plaque preserving the exact original logo */
+    /* Seamless Dark Logo Container */
     .brand-plaque {
-      background: var(--plaque-bg);
-      padding: 28px 44px;
-      border-radius: 16px;
-      box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.45),
-        0 0 0 1px rgba(255, 255, 255, 0.12);
-      margin-bottom: 44px;
-      max-width: 480px;
+      background: transparent;
+      padding: 8px 0;
+      margin-bottom: 40px;
+      max-width: 680px;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -128,7 +123,7 @@
       display: block;
       width: 100%;
       height: auto;
-      max-height: 115px;
+      max-height: 185px;
       object-fit: contain;
     }
 
@@ -316,7 +311,12 @@
       }
 
       .brand-plaque {
-        padding: 22px 28px;
+        padding: 0 12px;
+        max-width: 420px;
+      }
+
+      .brand-plaque img {
+        max-height: 115px;
       }
 
       .panorama-wrapper img {
@@ -343,7 +343,7 @@
 
     <main>
       <section class="hero">
-        <!-- Exact Original Logo inside a clean off-white gallery plaque -->
+        <!-- Seamless Dark Logo Container -->
         <div class="brand-plaque">
           <img src="logo.png" alt="EcoCittà — Urban Sustainability" />
         </div>

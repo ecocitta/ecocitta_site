@@ -36,7 +36,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Subtle ambient radial lighting */
     .ambient-bg {
       position: fixed;
       inset: 0;
@@ -62,6 +61,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .status-pill {
@@ -87,6 +95,48 @@
       box-shadow: 0 0 10px var(--accent-green);
     }
 
+    /* Language Switcher */
+    .lang-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .lang-label {
+      color: #6b7775;
+      margin-right: 4px;
+      font-size: 11px;
+    }
+
+    .lang-nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 2px 5px;
+      border-radius: 4px;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .lang-nav a:hover {
+      color: #ffffff;
+    }
+
+    .lang-nav a.active {
+      color: var(--accent-green);
+      background: rgba(107, 163, 70, 0.12);
+    }
+
+    .lang-sep {
+      color: rgba(255, 255, 255, 0.14);
+      font-size: 11px;
+    }
+
     .contact-link {
       font-size: 13px;
       color: var(--text-secondary);
@@ -107,7 +157,6 @@
       align-items: center;
     }
 
-    /* Seamless Dark Logo Container */
     .brand-plaque {
       background: transparent;
       padding: 8px 0;
@@ -334,16 +383,25 @@
 
   <div class="container">
     <header>
-      <div class="status-pill">
-        <span class="status-dot"></span>
-        Launching Soon
+      <div class="header-left">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          Launching Soon
+        </div>
+        <nav class="lang-nav" aria-label="Language selection">
+          <span class="lang-label">Language:</span>
+          <a href="index.html" class="active" lang="en">EN</a>
+          <span class="lang-sep">|</span>
+          <a href="pt.html" lang="pt-BR">PT</a>
+          <span class="lang-sep">|</span>
+          <a href="fr.html" lang="fr">FR</a>
+        </nav>
       </div>
       <a href="mailto:contact@ecocitta.org" class="contact-link">contact@ecocitta.org</a>
     </header>
 
     <main>
       <section class="hero">
-        <!-- Seamless Dark Logo Container -->
         <div class="brand-plaque">
           <img src="logo.png" alt="EcoCittà — Urban Sustainability" />
         </div>
@@ -363,7 +421,6 @@
         <p class="form-feedback" id="formFeedback" role="status"></p>
       </section>
 
-      <!-- Humanizing Panoramic Skyline Banner -->
       <section class="panorama-wrapper" aria-label="Urban skyline surrounded by green canopy">
         <img src="skyline.png" alt="Sunlit urban skyline framed by lush green tree canopies" />
         <div class="panorama-overlay">
@@ -371,7 +428,6 @@
         </div>
       </section>
 
-      <!-- Core Focus Areas -->
       <section class="pillars">
         <article class="pillar-card">
           <span class="pillar-num">01</span>
